@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KZ’s Wear — Wear the f* you want.</title>
+    <meta name="description" content="KZ’s Wear. Wear the f* you want." />
+    <meta name="theme-color" content="#0a0806" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
+    <!-- Las tipografías están en la carpeta /fonts y se cargan desde styles.css (no se llama a Google). -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Avisa al CSS de que hay JavaScript, antes de pintar nada (evita parpadeos en las animaciones). -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ================= MENÚ ================= -->
+    <header class="site-header">
+      <div class="site-header__bar">
+        <a class="monogram gold-text" href="#home" aria-label="KZ’s Wear — back to top">KZ</a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#trend">Trend</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= HERO =================
+           · Imagen de fondo: cambia el src de la <img class="hero__bg"> (tamaño ideal 1920×1080 o más).
+           · Los 4 productos flotantes se pintan solos desde script.js (lista PRODUCTS). -->
+      <section class="hero" id="home">
+        <img class="hero__bg" src="images/hero-bg.jpg" alt="" fetchpriority="high" decoding="async" />
+        <div class="hero__veil" aria-hidden="true"></div>
+
+        <div class="hero__inner">
+          <div class="hero__title">
+            <h1 class="hero__brand"><span>KZ’s</span> <span>Wear</span></h1>
+            <span class="rule" aria-hidden="true"></span>
+            <p class="hero__slogan">Wear the f* you want.</p>
+          </div>
+
+          <!-- Aquí script.js mete 2 productos a cada lado -->
+          <div class="hero__col hero__col--left" data-hero-col="left"></div>
+          <div class="hero__col hero__col--right" data-hero-col="right"></div>
+        </div>
+      </section>
+
+      <!-- ================= TREND (foto + nombre + precio) ================= -->
+      <section class="section trend" id="trend" aria-labelledby="trend-title">
+        <header class="section__head reveal">
+          <p class="eyebrow">Latest pieces</p>
+          <h2 class="section__title gold-text" id="trend-title">Trend</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </header>
+
+        <!-- Aquí script.js mete las tarjetas -->
+        <ul class="grid" id="trend-grid"></ul>
+      </section>
+
+      <!-- ================= INSTAGRAM ================= -->
+      <section class="section insta" id="instagram" aria-labelledby="insta-title">
+        <header class="section__head reveal">
+          <p class="eyebrow">Follow along</p>
+          <h2 class="section__title gold-text" id="insta-title">Instagram</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </header>
+
+        <!-- Aquí script.js mete las 6 fotos -->
+        <ul class="insta__grid" id="insta-grid"></ul>
+
+        <p class="insta__cta reveal">
+          <a class="btn" id="insta-link" href="#" target="_blank" rel="noopener noreferrer">Follow us</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER / CONTACT ================= -->
+    <footer class="footer" id="contact">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <p class="footer__logo gold-text">KZ’s Wear</p>
+          <p class="footer__slogan">Wear the f* you want.</p>
+        </div>
+
+        <nav class="footer__col" aria-label="Shop">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="#trend">Trend</a></li>
+            <li><a href="#instagram">Instagram</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h3>Contact</h3>
+          <ul>
+            <!-- TODO: pon aquí tu email real -->
+            <li><a href="mailto:your@email.com">your@email.com</a></li>
+          </ul>
+        </div>
+
+        <nav class="footer__col" aria-label="Legal">
+          <h3>Legal</h3>
+          <ul>
+            <!-- TODO: estas páginas hay que crearlas antes de vender (en Alemania el Impressum es obligatorio) -->
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">AGB</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <p class="footer__bottom">© <span id="year">2026</span> KZ’s Wear</p>
+    </footer>
+  </body>
+</html>
