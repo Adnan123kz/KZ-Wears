@@ -12,6 +12,9 @@
    ========================================================== */
 
 /* ---------- 1. FUENTES (están en /fonts, no se llama a Google) ---------- */
+html {
+  scrollbar-width: none; /* none = sin barra. Los otros valores son auto (normal) y thin (fina) */
+}
 @font-face {
   font-family: "Bodoni Moda";
   src: url("fonts/bodoni-moda-normal.woff2") format("woff2");

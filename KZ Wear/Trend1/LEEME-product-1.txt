@@ -1,0 +1,39 @@
+KZ's Wear · Página del producto 1 (Dust Trousers)
+==================================================
+
+QUÉ HAY EN ESTE ZIP (descomprímelo DENTRO de tu carpeta del proyecto, junto a index.html)
+  product-1.html          la estructura de la página
+  product-1.css           el diseño y TODAS las animaciones (está dividido en 11 apartados con índice)
+  product-1.js            talla obligatoria + botón Purchase (por ahora solo una demo)
+  fonts/arial-narrow-*    la tipografía que me pasaste
+  images/product-1/       las imágenes:
+      photo.jpg           la foto del pantalón SIN el ゴゴゴ dibujado encima
+      go-1..5.png         las 5 letras ゴ        (cada una es una pieza suelta)
+      tick-1..5.png       las rayitas ゛ de cada letra
+      dot-1..3.png        los 3 puntitos del final
+      argyle-tile.jpg     el mosaico del fondo (rombos con calaveras)
+      star.png            la estrella de las tallas
+      purchase-arrow.png  la flecha del botón (sin texto; "Purchase" lo escribe el CSS)
+      kira.png            Kira + Killer Queen recortados
+
+CÓMO ABRIRLA
+  Con Live Server: clic derecho en product-1.html → "Open with Live Server".
+
+DÓNDE CAMBIAR CADA COSA
+  Nombre en japonés y precio ......... product-1.html (busca las líneas con TODO)
+  Foto del pantalón .................. sustituye images/product-1/photo.jpg (725×903 px) por otra que NO lleve el ゴゴゴ dibujado
+  Lo oscuro que está el fondo ........ product-1.css → variable --dim (0 = nada, 1 = negro)
+  Tamaño de los rombos del fondo ..... product-1.css → .info → background-size
+  Inclinación del ゴゴゴ .............. product-1.css → variable --tilt
+  Animación de entrada de las letras . product-1.css → go-slam (y el retraso entre letras: el 0.16s de .go)
+  Puntos que flotan .................. product-1.css → dot-float (los %) y .dot → animation-duration (más pequeño = más rápido)
+  Tallas (S, M, L) ................... product-1.html: copia un bloque <input> + <label> y cambia la letra y el id/for
+  Mensaje de Purchase ................ product-1.js
+
+AVISOS (importantes si algún día lo publicas)
+  · La tipografía de /fonts es Arial Narrow Bold (Microsoft / Monotype). Es de pago: vale para probar
+    en tu ordenador, pero en una web pública necesitas licencia web o cambiarla por otra
+    (para cambiarla: los dos "url(...)" del principio de product-1.css).
+  · Kira, Killer Queen, el fondo de calaveras, la flecha "To Be Continued", el ゴゴゴ y la foto de la ropa
+    son material de terceros (JoJo's Bizarre Adventure / marcas de ropa). Sirve para practicar en local;
+    para vender con ello en Alemania hace falta permiso de los titulares (si no, riesgo de Abmahnung).

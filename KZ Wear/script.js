@@ -23,7 +23,7 @@
 //  · price va en euros y sin símbolo: 29 → "29,00 €".
 //  · Nombres y precios de abajo son de EJEMPLO.
 const PRODUCTS = [
-  { name: "Tee 01", price: 29, image: "images/products/product-1.jpg" },
+  { name: "Tee 01", price: 29, image: "Trend1/images/product-1/photo.jpg", page: "Trend1/product-1.html" },
   { name: "Tee 02", price: 29, image: "images/products/product-2.jpg" },
   { name: "Tee 03", price: 29, image: "images/products/product-3.jpg" },
   { name: "Tee 04", price: 29, image: "images/products/product-4.jpg" },
@@ -93,11 +93,13 @@ function renderTrend() {
   $("#trend-grid").innerHTML = PRODUCTS.map(
     (product, i) => `
       <li class="card reveal" id="product-${i + 1}" style="--i:${i}">
+        ${product.page ? `<a class="card__link" href="${esc(product.page)}">` : ""}
         <div class="card__media">
           <img src="${esc(product.image)}" alt="${esc(product.name)}" width="800" height="800" loading="lazy" decoding="async">
         </div>
         <h3 class="card__name">${esc(product.name)}</h3>
         <p class="card__price">${euro.format(product.price)}</p>
+        ${product.page ? `</a>` : ""}
       </li>`
   ).join("");
 }
